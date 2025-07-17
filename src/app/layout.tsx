@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Sansation } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const sansation = Sansation({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "700"],
+  variable: "--font-sansation",
   display: "swap",
 });
 
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body className={`${poppins.variable} font-sans antialiased`}>
+    <html lang="en" className={sansation.className}>
+      <body className={`${sansation.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

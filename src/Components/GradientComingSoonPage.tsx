@@ -1,4 +1,6 @@
 "use client";
+import imagePath from "@/constants/imagePath";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const GradientComingSoonPage: React.FC = () => {
@@ -14,32 +16,32 @@ const GradientComingSoonPage: React.FC = () => {
   return (
     <div className="h-screen bg-[#141414] text-white relative overflow-hidden">
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-10 flex justify-between items-center p-6 md:p-8">
+      <header className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between p-4 pt-8 md:p-8">
         {/* Logo */}
         <div className="flex items-center">
-          {/* <div className="w-10 h-10 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-lg transform rotate-12"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-lg transform -rotate-12 opacity-80"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-blue-500 to-purple-500 rounded-lg opacity-60"></div>
-          </div> */}
+          <div className="flex items-center justify-center w-56">
+            <Image
+              src={imagePath.appLogo}
+              height={1264}
+              width={1264}
+              alt="project"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center z-10">
+      <main className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
         {/* Main Heading with Gradient */}
-        <h1 className="text-6xl md:text-8xl font-extrabold mb-12 leading-tight">
-          <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-            Coming
-          </span>
+        <h1 className="mb-12 text-6xl font-bold leading-tight md:text-8xl">
+          <span className="text-[#A695FF]">Coming</span>
           <span className="text-white"> </span>
-          <span className="bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent">
-            Soon
-          </span>
+          <span className="text-[#A695FF]">Soon</span>
         </h1>
 
         {/* Description */}
-        <p className="text-lg md:text-2xl text-gray-300 mb-16 max-w-2xl leading-relaxed">
+        <p className="max-w-2xl mb-16 text-lg leading-relaxed text-white md:text-2xl">
           From bold bowls to iconic brands —
           <br />
           the future of food is cooking at Byte and Bite Foods.
@@ -48,7 +50,7 @@ const GradientComingSoonPage: React.FC = () => {
         {/* Email Signup Form */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col md:flex-row gap-4 mb-8 w-full max-w-1/3"
+          className="flex flex-col w-full gap-4 mb-8 md:flex-row md:max-w-1/3"
         >
           <input
             type="email"
@@ -60,7 +62,7 @@ const GradientComingSoonPage: React.FC = () => {
           />
           <button
             type="submit"
-            className="px-8 py-4 bg-white text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors"
+            className="px-8 py-4 font-medium text-gray-900 transition-colors bg-white rounded-lg hover:bg-gray-100"
           >
             Notify Me
           </button>
@@ -68,12 +70,12 @@ const GradientComingSoonPage: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 left-0 right-0 z-10 flex justify-between items-center p-6 md:p-8">
+      <footer className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-between p-6 md:p-8">
         {/* Privacy Policy */}
         {/* <div>
           <a
             href="#"
-            className="text-gray-400 hover:text-white transition-colors text-sm"
+            className="text-sm text-gray-400 transition-colors hover:text-white"
           >
             Privacy Policy
           </a>
@@ -81,15 +83,15 @@ const GradientComingSoonPage: React.FC = () => {
 
         {/* Social Media Links */}
         {/* <div className="flex items-center space-x-6 text-gray-400">
-          <a href="#" className="hover:text-white transition-colors text-sm">
+          <a href="#" className="text-sm transition-colors hover:text-white">
             Facebook
           </a>
           <span>/</span>
-          <a href="#" className="hover:text-white transition-colors text-sm">
+          <a href="#" className="text-sm transition-colors hover:text-white">
             Instagram
           </a>
           <span>/</span>
-          <a href="#" className="hover:text-white transition-colors text-sm">
+          <a href="#" className="text-sm transition-colors hover:text-white">
             LinkedIn
           </a>
         </div> */}
@@ -97,9 +99,9 @@ const GradientComingSoonPage: React.FC = () => {
 
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full opacity-10 blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-blue-500 to-green-500 rounded-full opacity-10 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-5 blur-3xl"></div>
+        <div className="absolute w-32 h-32 rounded-full top-1/4 left-1/4 bg-gradient-to-br from-purple-500 to-pink-500 opacity-10 blur-3xl"></div>
+        <div className="absolute w-40 h-40 rounded-full bottom-1/4 right-1/4 bg-gradient-to-br from-blue-500 to-green-500 opacity-10 blur-3xl"></div>
+        <div className="absolute w-48 h-48 transform -translate-x-1/2 -translate-y-1/2 rounded-full top-1/2 left-1/2 bg-gradient-to-br from-yellow-400 to-orange-500 opacity-5 blur-3xl"></div>
       </div>
     </div>
   );

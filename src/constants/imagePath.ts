@@ -1,6 +1,6 @@
 const imagePath = {
   appLogo: "/assets/images/appLogo.png",
-  favIcon: "/assets/images/favicon.png",
+  favIcon: "/favicon.png",
 };
 
 export default imagePath;

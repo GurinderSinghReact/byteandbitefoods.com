@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sansation } from "next/font/google";
 import "./globals.css";
+import imagePath from "@/constants/imagePath";
 
 const sansation = Sansation({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sansation.className}>
+      <link rel="icon" href={imagePath.favIcon} />
       <body className={`${sansation.variable} font-sans antialiased`}>
         {children}
       </body>
